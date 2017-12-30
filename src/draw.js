@@ -1,4 +1,3 @@
-let score = 0;
 const drawGrids=function(numberOfRows,numberOfCols) {
   let grid=document.getElementById("grid");
   for (var i = 0; i < numberOfRows; i++) {
@@ -41,7 +40,8 @@ const drawFood=function(food) {
   paintCell(food,"food");
 }
 
-const updateScore = function() {
-  score += 10;
-  document.getElementById('score').innerText = `Score:${score}`;
+const updateDisplayWithScore = function(score) {
+  score.updateScore();
+  let updatedscore = score.getScore();
+  document.getElementById('score').innerText = `Score:${updatedscore}`
 }
