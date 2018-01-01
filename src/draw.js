@@ -43,8 +43,6 @@ const drawFood=function(food) {
   paintCell(food.getPosition(),"food");
 }
 
-const updateDisplayWithScore = function(score) {
-  score.updateScore();
-  let updatedscore = score.getScore();
-  document.getElementById('score').innerText = `Score:${updatedscore}`
+const displayScore = function(score) {
+  document.getElementById('score').innerText = `Score:${score}`
 }
